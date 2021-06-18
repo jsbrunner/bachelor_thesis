@@ -57,4 +57,4 @@ includes various plotting functions, was particularly used to examine the data
 
 
 Data sets are directly loaded from the project's main folder.
-Figures are saved into the subdirectories "plots" and either "ec", "hw", "rt", and "ss" depending on the property depicted
+Figures are saved into the subdirectories "plots" and either "ec", "hw", "rt", and "ss" depending on the property depicted.
