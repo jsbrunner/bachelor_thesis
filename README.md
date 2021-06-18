@@ -1,8 +1,8 @@
 # README
 
 Investigating the Behavior of Advanced Automated Systems in Vehicle-Platoons through Empirical Observations
-Johannes S. Brunner
-June 2021
+, Johannes S. Brunner
+, June 2021
 __________________________________
 
 The code used to investigate on empirical data is split into several python-files:
