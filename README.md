@@ -56,5 +56,5 @@ attempt to derive flow and density and create the fundamental diagram (no result
 includes various plotting functions, was particularly used to examine the data
 
 
-Data sets are directly loaded from the project's main folder
+Data sets are directly loaded from the project's main folder.
 Figures are saved into the subdirectories "plots" and either "ec", "hw", "rt", and "ss" depending on the property depicted
