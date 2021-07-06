@@ -254,7 +254,7 @@ fig, (axA, axB, axC) = plt.subplots(1, 3, gridspec_kw={'width_ratios': [2, 2, 3]
 fig.set_size_inches(9, 6)
 fig.suptitle('Tractive Energy Consumption', y=0.98, fontsize='x-large')
 
-axA.set_title('AstaZero\n(16.4 m/s - 25 m/s)', fontsize=axistitle_size)
+axA.set_title('AstaZero\n(16.4 m/s - 25 m/s, {} km)'.format(round(df_A1['len_dist'].iloc[0]/1000, 1)), fontsize=axistitle_size)
 axA.set_ylim(ylim)
 axA.violinplot(list_combined_A, widths=0.5, showextrema=False)
 axA.scatter([1, 1, 1, 1, 1], energy_A1_list, c=colors, zorder=zord, marker=marker)
@@ -264,18 +264,18 @@ axA.set_xticklabels([df_A1['mode'].iloc[0], df_A2['mode'].iloc[0]])
 axA.set_ylabel('Tractive energy consumption (kWh/100km)')
 [axA.axhline(y=i, linewidth=0.5, color='black', alpha=0.2) for i in hlines]
 
-axB.set_title('AstaZero\n(13.6 m/s - 27.5 m/s)', fontsize=axistitle_size)
+axB.set_title('AstaZero\n(13.6 m/s - 27.5 m/s, {} km)'.format(round(df_B1['len_dist'].iloc[0]/1000, 1)), fontsize=axistitle_size)
 axB.set_ylim(ylim)
 axB.violinplot(list_combined_B, widths=0.5, showextrema=False)
 axB.scatter([1, 1, 1, 1, 1], energy_B1_list, c=colors, zorder=zord, marker=marker)
 axB.scatter([2, 2, 2, 2, 2], energy_B2_list, c=colors, zorder=zord, marker=marker)
 axB.set_xticks([1, 2])
 axB.set_xticklabels([df_B1['mode'].iloc[0], df_B2['mode'].iloc[0]])
-axB.set_yticks([])
+# axB.set_yticks([])
 [axB.axhline(y=i, linewidth=0.5, color='black', alpha=0.2) for i in hlines]
 
-axC.set_title('CARMA1 and CARMA2\n(19.6 m/s - 26.2 m/s)', fontsize=axistitle_size)
-axC.set_ylim(ylim1)
+axC.set_title('CARMA1 and CARMA2\n(19.6 m/s - 26.2 m/s, {} km)'.format(round(df_C1['len_dist'].iloc[0]/1000, 1)), fontsize=axistitle_size)
+axC.set_ylim(ylim)
 axC.violinplot(list_combined_C, widths=0.5, showextrema=False)
 axC.scatter([1, 1, 1, 1, 1], energy_C2_list, c=colors, zorder=zord, marker=marker)
 axC.scatter([2, 2, 2, 2, 2], energy_C1_list, c=colors, zorder=zord, marker=marker)
